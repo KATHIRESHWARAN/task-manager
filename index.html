@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your daily tasks efficiently</p>
+        </header>
+
+        <main>
+            <section class="task-input">
+                <form id="task-form">
+                    <input type="text" id="task-title" placeholder="Task title..." required>
+                    <input type="text" id="task-desc" placeholder="Description (optional)">
+                    <button type="submit">Add Task <i class="fas fa-plus"></i></button>
+                </form>
+            </section>
+
+            <section class="task-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </section>
+
+            <section class="task-list">
+                <ul id="tasks-container">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
